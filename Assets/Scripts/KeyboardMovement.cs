@@ -23,27 +23,27 @@ public class KeyboardMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Entered");
+        //Debug.Log("Entered");
+        print(collision.gameObject);
         if (collision.gameObject.CompareTag("Terrain"))
         {
-            isGrounded = true;
+            print("collided with terrain");
+            this.isGrounded = true;
         }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        Debug.Log("Exited");
+        //Debug.Log("Exited");
         if (collision.gameObject.CompareTag("Terrain"))
         {
-            isGrounded = false;
+            print("stopped colliding with terrain");
+            this.isGrounded = false;
         }
     }
 
     void Update()
     {
-        // Code from labs
-
-        // Can use Vector3.up or transform.up
         inputVector = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
         // Sprint
@@ -53,16 +53,35 @@ public class KeyboardMovement : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            print(isGrounded);
             rb.AddForce(jumpForce * 10 * Vector3.up, ForceMode.Acceleration);
         }
 
-        // Crouch - my addition
+        // Crouch
         if (Input.GetKeyDown(KeyCode.Q)) 
         {
             if (tr.localScale == playerScale) 
                 tr.localScale = new Vector3(0.5f, 0.25f, 0.5f);
             else 
                 tr.localScale = playerScale;
+        }
+
+        // Keep the player within the bounds of the map by bouncing them back in if they ever try to go out
+        Vector3 playerPosition = tr.position;
+        if (playerPosition.y < 0) {
+            tr.position = new Vector3(playerPosition.x, playerPosition.y + 1, playerPosition.z);
+        }
+        if (playerPosition.x < -50) {
+            tr.position = new Vector3(playerPosition.x + .1f, playerPosition.y, playerPosition.z);
+        }
+        if (playerPosition.x > 50) {
+            tr.position = new Vector3(playerPosition.x - .1f, playerPosition.y, playerPosition.z);
+        }
+        if (playerPosition.z < -50) {
+            tr.position = new Vector3(playerPosition.x + .1f, playerPosition.y, playerPosition.z + 1);
+        }
+        if (playerPosition.z > 50) {
+            tr.position = new Vector3(playerPosition.x - .1f, playerPosition.y, playerPosition.z - 1);
         }
     }
 
