@@ -61,7 +61,7 @@ public class KeyboardMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) 
         {
             if (tr.localScale == playerScale) 
-                tr.localScale = new Vector3(0.5f, 0.25f, 0.5f);
+                tr.localScale = new Vector3(0.2f, 0.1f, 0.2f);
             else 
                 tr.localScale = playerScale;
         }
@@ -69,7 +69,7 @@ public class KeyboardMovement : MonoBehaviour
         // Keep the player within the bounds of the map by bouncing them back in if they ever try to go out
         Vector3 playerPosition = tr.position;
         if (playerPosition.y < 0) {
-            tr.position = new Vector3(playerPosition.x, playerPosition.y + 1, playerPosition.z);
+            tr.position = new Vector3(playerPosition.x, playerPosition.y + 1.6f, playerPosition.z);
         }
         if (playerPosition.x < -50) {
             tr.position = new Vector3(playerPosition.x + .1f, playerPosition.y, playerPosition.z);

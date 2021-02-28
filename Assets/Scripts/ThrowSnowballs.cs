@@ -20,15 +20,15 @@ public class ThrowSnowballs : MonoBehaviour
             // https://answers.unity.com/questions/772331/spawn-object-in-front-of-player-and-the-way-he-is.html
             float spawnDistance = 0.5f; // Distance away from player snowball will spawn
             Transform playerTransform = this.player.transform;
-            Vector3 spawnOffset = new Vector3(0.0f, 0.3f, 0.0f); // An offset to make the snowball spawn on the upper side of the player
+            Vector3 spawnOffset = new Vector3(0.0f, 0.2f, 0.0f); // An offset to make the snowball spawn on the upper side of the player
             Vector3 spawnLocation = (playerTransform.position) + (spawnDistance * playerTransform.forward) + spawnOffset;
             GameObject snowball = (GameObject)Instantiate(this.snowballPrefab, spawnLocation, playerTransform.rotation);
 
             // Add force to it to "throw it"
             // https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html
-            int thrust = 350;
+            int thrust = 450;
             Rigidbody snowballRigidBody = snowball.GetComponent<Rigidbody>();
-            Vector3 snowballDirection = snowball.transform.forward;
+            Vector3 snowballDirection = playerTransform.transform.forward;
             Vector3 throwForceVector = (snowballDirection * thrust) + snowballRigidBody.velocity;
             snowballRigidBody.AddForce(throwForceVector);
         }
