@@ -61,7 +61,7 @@ public class KeyboardMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) 
         {
             if (tr.localScale == playerScale) 
-                tr.localScale = new Vector3(0.2f, 0.1f, 0.2f);
+                tr.localScale = new Vector3(0.2f, 0.08f, 0.2f);
             else 
                 tr.localScale = playerScale;
         }
