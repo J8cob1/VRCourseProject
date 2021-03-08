@@ -26,7 +26,7 @@ public class ThrowSnowballs : MonoBehaviour
 
             // Add force to it to "throw it"
             // https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html
-            int thrust = 450;
+            int thrust = 650;
             Rigidbody snowballRigidBody = snowball.GetComponent<Rigidbody>();
             Vector3 snowballDirection = playerTransform.transform.forward;
             Vector3 throwForceVector = (snowballDirection * thrust) + snowballRigidBody.velocity;

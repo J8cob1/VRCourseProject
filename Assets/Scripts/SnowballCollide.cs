@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class SnowballScript : MonoBehaviour
 {
+    public GameObject snowball;
+
+    private void destorySelf() {
+        // Make the snowball invisiable till it gets destroyed
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+        // Set off the snowball explosion
+        ParticleSystem explosion = gameObject.GetComponent<ParticleSystem>();
+        explosion.Play();
+
+        // Destory the game object after the explosion has finished
+        Destroy(gameObject, explosion.main.duration);
+    }
+
     // Update is called once per frame
     void Update(){
         // Destroy object if it goes below the map
         if (gameObject.transform.position.y < 0f) {
-            Destroy(gameObject);
+            this.destorySelf();
         }
     }
 
     // Delete on collision with something. 
     // Our collistion strategy may have to be changed later, but it's here for now
     void OnCollisionEnter(Collision collision) {
-        Destroy(gameObject);
+        this.destorySelf();
     }
 }

@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class KeyboardMovement : MonoBehaviour
 {
+    // Note for public variables. They may be overridden in the Unity UI script configuration
     public Rigidbody rb;
     public Transform tr;
-    private Vector3 playerScale;
+    public Camera cam;
     public float moveSpeed = 35f;
     public float sprintSpeedMultiplier = 1.6f;
     public float jumpForce = 35f;
 
+    private Vector3 playerScale;
     private Vector3 inputVector;
     private bool isGrounded = true;
 
@@ -53,7 +55,7 @@ public class KeyboardMovement : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            print(isGrounded);
+            //tr.Translate(Vector3.up * jumpForce);
             rb.AddForce(jumpForce * 10 * Vector3.up, ForceMode.Acceleration);
         }
 
@@ -65,6 +67,7 @@ public class KeyboardMovement : MonoBehaviour
             else 
                 tr.localScale = playerScale;
         }
+        
 
         // Keep the player within the bounds of the map by bouncing them back in if they ever try to go out
         Vector3 playerPosition = tr.position;
@@ -88,8 +91,8 @@ public class KeyboardMovement : MonoBehaviour
     // Runs a set number of times per second (default, it's 30)
     void FixedUpdate()
     {
-        Vector3 movement = moveSpeed * 10f * inputVector.z * Time.fixedDeltaTime * transform.forward +
-                            moveSpeed * 10f * inputVector.x * Time.fixedDeltaTime * transform.right;
+        Vector3 movement = moveSpeed * 10f * inputVector.z * Time.fixedDeltaTime * (cam.transform.forward) +
+                            moveSpeed * 10f * inputVector.x * Time.fixedDeltaTime * (cam.transform.right);
 
         rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
     }
