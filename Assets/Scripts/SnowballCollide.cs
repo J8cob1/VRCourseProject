@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnowballScript : MonoBehaviour
+public class SnowballCollide : MonoBehaviour
 {
     public GameObject snowball;
 
@@ -30,6 +30,8 @@ public class SnowballScript : MonoBehaviour
     // Delete on collision with something. 
     // Our collistion strategy may have to be changed later, but it's here for now
     void OnCollisionEnter(Collision collision) {
-        this.destorySelf();
+        if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3f) {
+            this.destorySelf();
+        }
     }
 }
