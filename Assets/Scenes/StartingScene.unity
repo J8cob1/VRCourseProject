@@ -1742,9 +1742,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 206332480}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
---- !u!1001 &453125988
-=======
 --- !u!1 &644792797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,7 +2032,6 @@ Transform:
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &694558525
->>>>>>> fd36025... working on snowball gen
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3224,10 +3220,6 @@ PrefabInstance:
       value: Snowball (31)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-<<<<<<< HEAD
-  m_SourcePrefab: {fileID: 100100000, guid: f3c63b67e96e0ce4a965c178556998af, type: 3}
---- !u!1001 &822159844
-=======
   m_SourcePrefab: {fileID: 100100000, guid: 78af3a7aad589fa49b8fb946c9e57362, type: 3}
 --- !u!1 &1182900065
 GameObject:
@@ -3338,7 +3330,6 @@ Transform:
   m_PrefabInstance: {fileID: 1093221304}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1200263144
->>>>>>> fd36025... working on snowball gen
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3920,10 +3911,6 @@ PrefabInstance:
       value: Snowball (38)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-<<<<<<< HEAD
-  m_SourcePrefab: {fileID: 100100000, guid: f3c63b67e96e0ce4a965c178556998af, type: 3}
---- !u!1001 &898817345
-=======
   m_SourcePrefab: {fileID: 100100000, guid: af9ebdc546d59e04fa5f4cf6805cc187, type: 3}
 --- !u!1 &1454088323
 GameObject:
@@ -4114,7 +4101,6 @@ MonoBehaviour:
   snowballPrefab: {fileID: 5141267496830973087, guid: f3c63b67e96e0ce4a965c178556998af,
     type: 3}
 --- !u!1001 &1469950288
->>>>>>> fd36025... working on snowball gen
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8911,89 +8897,6 @@ MeshRenderer:
 --- !u!1001 &2117447580
 PrefabInstance:
   m_ObjectHideFlags: 0
-<<<<<<< HEAD
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1682695824}
-    m_Modifications:
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.3875008
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.8000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973074, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141267496830973087, guid: f3c63b67e96e0ce4a965c178556998af,
-        type: 3}
-      propertyPath: m_Name
-      value: Snowball (22)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f3c63b67e96e0ce4a965c178556998af, type: 3}
-=======
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9007,7 +8910,6 @@ PrefabInstance:
   GetXRNode: 5
   snowballPrefab: {fileID: 5141267496830973087, guid: f3c63b67e96e0ce4a965c178556998af,
     type: 3}
->>>>>>> fd36025... working on snowball gen
 --- !u!1001 &2124088375
 PrefabInstance:
   m_ObjectHideFlags: 0
