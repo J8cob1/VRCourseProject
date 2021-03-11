@@ -1387,6 +1387,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   inputSource: 4
+  gravity: -9.81
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  additionalHeight: 0.2
 --- !u!4 &683449833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4984444669274794, guid: 7c1543f51c5b8cc488fc53ab3cbffbb1,
@@ -3517,6 +3522,7 @@ GameObject:
   - component: {fileID: 1454088327}
   - component: {fileID: 1454088326}
   - component: {fileID: 1454088328}
+  - component: {fileID: 1454088329}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
@@ -3675,6 +3681,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1454088329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454088323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737668f17ba76d74e8bfd638ba4e4064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GetXRNode: 4
+  snowballPrefab: {fileID: 5141267496830973087, guid: f3c63b67e96e0ce4a965c178556998af,
+    type: 3}
 --- !u!1001 &1469950288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4941,6 +4962,7 @@ GameObject:
   - component: {fileID: 2071570366}
   - component: {fileID: 2071570365}
   - component: {fileID: 2071570367}
+  - component: {fileID: 2071570368}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Untagged
@@ -5099,6 +5121,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2071570368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071570362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737668f17ba76d74e8bfd638ba4e4064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GetXRNode: 5
+  snowballPrefab: {fileID: 5141267496830973087, guid: f3c63b67e96e0ce4a965c178556998af,
+    type: 3}
 --- !u!1001 &2124088375
 PrefabInstance:
   m_ObjectHideFlags: 0
