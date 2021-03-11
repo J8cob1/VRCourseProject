@@ -4941,7 +4941,7 @@ MonoBehaviour:
   m_CustomReticle: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
-  m_MovementType: 1
+  m_MovementType: 2
   m_TrackPosition: 1
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
@@ -4970,7 +4970,7 @@ MonoBehaviour:
   m_ThrowVelocityScale: 5
   m_ThrowAngularVelocityScale: 5
   m_GravityOnDetach: 0
-  m_RetainTransformParent: 1
+  m_RetainTransformParent: 0
 --- !u!114 &8543251411893914047
 MonoBehaviour:
   m_ObjectHideFlags: 0
