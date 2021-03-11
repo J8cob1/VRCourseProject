@@ -51,7 +51,7 @@ public class ContinousMovement : MonoBehaviour
     void capsuleFollowHeadset()
     {
         character.height = rig.cameraInRigSpaceHeight + additionalHeight;
-        Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGamObject.transform.position);
+        Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGameObject.transform.position);
         character.center = new Vector3(capsuleCenter.x, character.height/2 + character.skinWidth, capsuleCenter.z);
     }
 
