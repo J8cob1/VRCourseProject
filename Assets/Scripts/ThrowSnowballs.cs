@@ -14,8 +14,10 @@ public class ThrowSnowballs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //OVRInput.update();
+        OVRInput.FixedUpdate();
         // On left mouse click, thtoe a snowball
-        if (Input.GetMouseButtonDown(0)) {
+        if (/*Input.GetMouseButtonDown(0) ||*/ OVRInput.Get(OVRInput.Button.One)) {
             // Generate the snowball in front of the player
             // https://answers.unity.com/questions/772331/spawn-object-in-front-of-player-and-the-way-he-is.html
             float spawnDistance = 0.5f; // Distance away from player snowball will spawn
